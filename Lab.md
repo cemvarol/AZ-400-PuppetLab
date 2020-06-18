@@ -27,7 +27,7 @@ Consider the following guidelines.
 
 - **Subscription:** Your Azure subscription
 - **Resource group:** Provide a ne Resource group name.  E.g. **PuppetLab**. 
--- Remember to remove the resources created in this lab by deleting the Resource Group.
+- - Remember to remove the resources created in this lab by deleting the Resource Group.
 - **Location:**  Select a region to deploy the VMs to. E.g. **EastUs or EastUS2 or WestUs.**
 - **Pm Admin Username:** The  **Pm**  refers to the Puppet Master VM use something you will remember during this lab E.g. **azureuser**.  
 - **Pm Admin Password:** Set the same Admin Password for both Nodes, and for the  **Pm Console**. E.g. **Passw0rd01234**  _(This is a password for the Puppet Master Virtual Machine)_
