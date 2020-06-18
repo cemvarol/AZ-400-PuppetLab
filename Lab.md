@@ -41,9 +41,9 @@ Consider the following guidelines.
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
 
 
-1. When the deployment completes, select the  **Resource Groups**  blade from the Azure Portal menu. Choose the name of Resource Group that you created,  **cd-puppet-hol**  for example.
+2. When the deployment completes, select the  **Resource Groups**  blade from the Azure Portal menu. Choose the name of Resource Group that you created,  **cd-puppet-hol**  for example.
 
-![](RackMultipart20200618-4-ix4dp6_html_d3bf8d9c80d50dbd.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/02-ResourceGroup.png)
 
 1. Within the  **Resource Group Overview**  pane, beside  **Deployments** , select the  **1 succeeded**  message to view the deployment details. The status of the Microsoft.Template resource should indicate that the deployment has  **succeeded**.
 
