@@ -46,7 +46,7 @@ Use the  **checkbox**  to agree to the Azure Marketplace terms and conditions. S
 
 Choose the Microsoft.Template resource, listed in the  **Deployment Name**  column.
 
-![](RackMultipart20200618-4-ix4dp6_html_a71653f7990a3a06.png)
+![](RackMultipart20200618-4-ix4dp6_html_a71653f7990a3a06.png) 
 
 1. There is a list of the deployed resources in the  **Microsoft.Template - Overview**  pane, below the  **Your deployment is complete**  message. Select the  **Puppet Master VM**  from the list, for example partspuppetmasterek01.
 
