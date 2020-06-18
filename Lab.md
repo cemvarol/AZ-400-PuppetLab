@@ -38,10 +38,6 @@ Consider the following guidelines.
 - **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_puppetnode01_**
 
 
-
-- and  **Mrp**  refers to the Node VM. Choose the same Admin Username for both  **Pm**  and  **Mrp**  VMs. E.g., **azureuser**.
-. You could include the word **_node_** in the Node DNS name, if you wish, e.g. **_pupmaster_**. Create unique DNS names for both VMs by adding your initials as a suffix. E.g. **_puppetmaster01_** and **_puppetnode01_**
-
 ![](RackMultipart20200618-4-ix4dp6_html_30e11446a168e6b9.png)
 
 Make a note of the location region, as well as any usernames and passwords you set for the VMs.
