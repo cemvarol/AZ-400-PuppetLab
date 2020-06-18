@@ -268,7 +268,7 @@ You can also use the cat command on the Node, to verify the presence of the file
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/28-PuttyN7.png)
 
-1. Correct configuration drift.
+3. Correct configuration drift.
 
 By default, Puppet Agent runs every 30 minutes on the Nodes. Each time the Agent runs, Puppet determines if the environment is in the correct state. If it is not in the correct state, Puppet reapplies Classes as necessary. This process allows Puppet to detect _Configuration Drift_, and fix it.
 
@@ -292,7 +292,7 @@ cat /tmp/dummy.txt
 
 You can also edit the contents of the file dummy.txt on the Node. Re-run the sudo puppet agent --test command, and verify that the contents of the file dummy.txt have been reverted to match the configuration specified on the Puppet Master.
 
-Task 5: Create a Puppet Program to describe the prerequisites for the PU MRP app
+### Task 5: Create a Puppet Program to describe the prerequisites for the PU MRP app
 
 We have hooked the Node (partsmrp) up to the Puppet Master. Now we can write the Puppet Program to describe the prerequisites for the PU MRP app.
 
@@ -301,28 +301,26 @@ In practice, the different parts of a large configuration solution are typically
 For simplicity, in this lab, we will describe our entire configuration in a single Puppet Program file init.pp, from inside the mrpapp module that we created earlier. In Task 5, we will build up our init.pp step-by-step.
 
 Task 5.1 Configure MongoDB
-
 Task 5.2 Configure Java
-
 Task 5.3 Create User and Group
-
 Task 5.4 Configure Tomcat
-
 Task 5.5 Deploy a WAR File
-
 Task 5.6 Start the Ordering Service
-
 Task 5.7 Complete the mrpapp Resource
 
-**Please run the command below for all 8 tasks above on Master NODE…**
+**Please run the command below for all 7 tasks above on Master NODE…**
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/init2.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyMA.png)
 
 Task 5.8 Configure .war file extracton permissions
 
 **Please run the command below for task 5.8**
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/war.pp /etc/puppetlabs/code/environments/production/modules/tomcat/manifests/war.pp_
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMB.png)
 
 Task 6: Run the Puppet Configuration on the Node
 
