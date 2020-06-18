@@ -347,4 +347,4 @@ The  **PU MRP app Welcome**  webpage should be displayed in your web browser.
 
 Explore the PU MRP app to confirm that it functions as intended. For example, select the  **Orders**  button, in your web browser, to view the  **Orders page**.
 
-![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png)
+![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png) 
