@@ -37,10 +37,13 @@ Consider the following guidelines.
 - **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **Passw0rd01234**   _(This is a password for the Puppet Master Virtual Machine)_
 - **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pnodecvaz032001_** _remember to provide something unique_
 
+##### Make a note of the location region, as well as any usernames and passwords you set for the VMs.
 
+
+#
+#
+#
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
-
-Make a note of the location region, as well as any usernames and passwords you set for the VMs.
 
 Use the  **checkbox**  to agree to the Azure Marketplace terms and conditions. Select the  **Purchase**  button. Allow about 10 minutes for each deployment to complete.
 
