@@ -15,7 +15,7 @@ Instead of manually creating the VMs in Azure, we will use an **Azure Resource M
 
 
 
-[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)      [![](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
+[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json'{:target="_blank"})      [![](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
 
 - The VMs will be deployed to a Resource Group along with a Virtual Network (VNET), and some other required resources.
 
