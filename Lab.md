@@ -1,19 +1,24 @@
-Lab environment
+# Lab environment
 
-In this lab you will use the following two machines.
+## In this lab you will use the following two machines.
 
-- A machine known as a Node will host the PU MRP app. The only task you will perform on the node is to install the Puppet Agent. The Puppet Agent can run on Linux or Windows. For this lab, we will configure the Node in a Linux Ubuntu Virtual Machine (VM).
-- A Puppet Master machine. The rest of the configuration will be applied by instructing Puppet how to configure the Node through Puppet Programs, on the Puppet Master. The Puppet Master _must_ be a Linux machine. For this lab, we will configure the Puppet Master in a Linux Ubuntu VM.
+- A machine known as a _**Node**_ will host the **PU MRP** app. The only task you will perform on the node is to **install the Puppet Agent**. The Puppet Agent can run on Linux or Windows. 
+For this lab, we will configure the Node in a Linux Ubuntu Virtual Machine (VM).
+- A **Puppet Master machine**. The rest of the configuration will be applied by instructing Puppet how to configure the Node through Puppet Programs, on the Puppet Master. **The Puppet Master _must_ be a Linux machine**. For this lab, we will configure the Puppet Master in a Linux Ubuntu VM.
 
-Instead of manually creating the VMs in Azure, we will use an Azure Resource Management (ARM) template.
+Instead of manually creating the VMs in Azure, we will use an **Azure Resource Management (ARM) Template**.
 
-Task 1: Provision a Puppet Master and Node in Azure using Azure Resource Manager templates (both inside Linux Ubuntu Virtual Machines)
+#### Task 1: Provision a Puppet Master and Node in Azure using Azure Resource Manager templates (both inside Linux Ubuntu Virtual Machines)
 
 1. To provision the required VMs in Azure using an ARM template, select the  **Deploy to Azure**  button, and follow the wizard. You will need to log in to the Azure Portal.
 
-[![](RackMultipart20200618-4-ix4dp6_html_dbf7529dc1abd85f.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FPartsUnlimitedMRP%2Fmaster%2FLabfiles%2FAZ-400T05-ImplemntgAppInfra%2FLabfiles%2FM04%2FPuppet%2Fenv%2FPuppetPartsUnlimitedMRP.json) [![](RackMultipart20200618-4-ix4dp6_html_c265986f7f783102.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FPartsUnlimitedMRP%2Fmaster%2FLabfiles%2FAZ-400T05-ImplemntgAppInfra%2FLabfiles%2FM04%2FPuppet%2Fenv%2FPuppetPartsUnlimitedMRP.json)
 
-The VMs will be deployed to a Resource Group along with a Virtual Network (VNET), and some other required resources.
+
+[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FPartsUnlimitedMRP%2Fmaster%2FLabfiles%2FAZ-400T05-ImplemntgAppInfra%2FLabfiles%2FM04%2FPuppet%2Fenv%2FPuppetPartsUnlimitedMRP.json)
+
+[![](http://armviz.io/visualizebutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FPartsUnlimitedMRP%2Fmaster%2FLabfiles%2FAZ-400T05-ImplemntgAppInfra%2FLabfiles%2FM04%2FPuppet%2Fenv%2FPuppetPartsUnlimitedMRP.json) [![](RackMultipart20200618-4-ix4dp6_html_c265986f7f783102.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoft%2FPartsUnlimitedMRP%2Fmaster%2FLabfiles%2FAZ-400T05-ImplemntgAppInfra%2FLabfiles%2FM04%2FPuppet%2Fenv%2FPuppetPartsUnlimitedMRP.json)
+
+- The VMs will be deployed to a Resource Group along with a Virtual Network (VNET), and some other required resources.
 
 **Note:**  You can review the JSON template and script files used to provision the VMs in the [Puppet lab files folder](https://github.com/Microsoft/PartsUnlimitedMRP/tree/master/Labfiles/AZ-400T05-ImplemntgAppInfra/Labfiles/M04/Puppet) on GitHub.
 
@@ -347,4 +352,4 @@ The  **PU MRP app Welcome**  webpage should be displayed in your web browser.
 
 Explore the PU MRP app to confirm that it functions as intended. For example, select the  **Orders**  button, in your web browser, to view the  **Orders page**.
 
-![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png) 
+![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png)
