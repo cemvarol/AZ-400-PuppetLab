@@ -39,9 +39,6 @@ Consider the following guidelines.
 
 ##### Make a note of the location region, as well as any usernames and passwords you set for the VMs.
 
-
-#
-#
 #
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
 
