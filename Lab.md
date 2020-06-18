@@ -38,7 +38,7 @@ Consider the following guidelines.
 - **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pnodecvaz032001_** _remember to provide something unique_
 
 
-![](RackMultipart20200618-4-ix4dp6_html_30e11446a168e6b9.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
 
 Make a note of the location region, as well as any usernames and passwords you set for the VMs.
 
