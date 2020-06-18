@@ -41,7 +41,7 @@ Consider the following guidelines.
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
 
 
-2. When the deployment completes, select the  **Resource Groups**  blade from the Azure Portal menu. Choose the name of Resource Group that you created,  **cd-puppet-hol**  for example.
+3. When the deployment completes, select the  **Resource Groups**  blade from the Azure Portal menu. Choose the name of Resource Group that you created,  **cd-puppet-hol**  for example.
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/02-ResourceGroup.png)
 
