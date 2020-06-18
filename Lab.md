@@ -31,11 +31,11 @@ Consider the following guidelines.
 - **Location:**  Select a region to deploy the VMs to. E.g. **EastUs or EastUS2 or WestUs.**
 - **Pm Admin Username:** The  **Pm**  refers to the Puppet Master VM use something you will remember during this lab E.g. **azureuser**.  
 - **Pm Admin Password:** Set the same Admin Password for both Nodes, and for the  **Pm Console**. E.g. **Passw0rd01234**  _(This is a password for the Puppet Master Virtual Machine)_
-- **Pm Dns Name For Public IP:** Include the word **_master_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pupmas032001_** _remember to provide something unique_
+- **Pm Dns Name For Public IP:** Include the word **_master_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pmascvaz032001_** _remember to provide something unique_
 - **Pm Console Password:** Provide a password for the **Puppet Master console admin account** You can use the same password E.g. **Passw0rd01234** 
 - **Mrp Admin Username:** The  **Mrp**  refers to the Puppet Node VM use something you will remember during this lab E.g. **azureuser**. 
 - **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **Passw0rd01234**   _(This is a password for the Puppet Master Virtual Machine)_
-- **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pupnode032001_** _remember to provide something unique_
+- **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pnodecvaz032001_** _remember to provide something unique_
 
 
 ![](RackMultipart20200618-4-ix4dp6_html_30e11446a168e6b9.png)
