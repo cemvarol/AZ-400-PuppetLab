@@ -64,7 +64,7 @@ Override the certificate error warning messages, and visit the webpage. It is sa
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/06-browse2.png)
 
-7. Log in to the  **Puppet Master Console**  with the following credentials. If you provided others, use them.
+7. Log in to the  **Puppet Master Console**  with the following credentials. This is the admin console.
   - **user name**  = admin
   - **Password**  = Passw0rd01234
 
@@ -80,51 +80,54 @@ You are now ready to add the Node to the Puppet Master. Once the Node is added, 
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/08-browse4.png)
 
-1. In Azure Portal, from the  **left menu** , choose  **All Resources**  \&gt;  **partsmrpnodeek01**  (or whatever name you specified for the Node / partsmrp VM). Make a note of the  **DNS name**  value for the Node VM.
+2. Establish an SSH connection to the Node VM. In the following example, we will connect to the Node VM using the PuTTy SSH client.
 
-![](RackMultipart20200618-4-ix4dp6_html_9e23c9c0689bb2fa.png)
+Specify the  **Node** DNS name as the destination  _Host Name_   **_. Not the Master_**
 
-1. Establish an SSH connection to the Node VM. In the following example, we will connect to the Node VM using the PuTTy SSH client.
-
-Specify the Node DNS name as the destination  **Host Name**.
-
-![](RackMultipart20200618-4-ix4dp6_html_17c0646dd8595325.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/09-PuttyN1.png)
 
 If prompted, choose  **Yes**  to add the SSH key to PuTTy&#39;s cache.
 
-![](RackMultipart20200618-4-ix4dp6_html_67fc264a415505bd.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/10-PuttyN2.png)
 
-Log in with username and password credentials that you specified in Task 1. For example, azureuser and Passw0rd0134.
+Log in with username and password credentials that you specified in Task 1. 
+- **user name**  = azureuser
+- **Password**  = Passw0rd01234
 
-![](RackMultipart20200618-4-ix4dp6_html_bb92b8717de9fbb3.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/11-PuttyN3.png)
 
-1. Run the Add Node command on the node.
+3. Run the Add Node command on the node.
 
-Enter the Add Node command into the SSH terminal, which you noted earlier in Step 1. The command begins with curl.... Run the command.
+Enter the command into the SSH terminal, which you noted earlier in Step 1. 
+The command begins with **curl**.... 
 
-![](RackMultipart20200618-4-ix4dp6_html_124dacfe6fd250bc.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/12-browse5.png)
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/13-PuttyN4.png)
 
 Wait for the command to install the Puppet Agent and any dependencies on the Node. The command takes two or three minutes to complete.
 
-![](RackMultipart20200618-4-ix4dp6_html_235622fb6a1f82fc.png)
+**Note:**  Console may prompt the password when you run the command, please enter the password again. 
+- **Password**  = Passw0rd01234
 
-From here onwards, you will configure the Node from the Puppet Master only.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/14-PuttyN5.png)
 
-1. Accept the pending Node request.
+### From here onwards, you will configure the Node from the Puppet Master only.
 
-Return to the  **Puppet Configuration Management Console**.  **Refresh**  the  **Unsigned Certificates**  webpage (where you previously got the Node install command). You should see a pending unsigned certificate request. Choose  **Accept**  to approve the node.
+4. Accept the pending Node request.
 
+Return to the  **Puppet Configuration Management Console**.  **Refresh**  the  **Unsigned Certificates**  webpage (where you previously got the _curl_ command). You should see a pending unsigned certificate request. Choose  **Accept All**  to approve the node.
 This is a request to authorize the certificate between the Puppet Master and the Node, so that they can communicate securely.
 
-![](RackMultipart20200618-4-ix4dp6_html_454f189276fa78cf.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/15-browse5.png)
 
-1. Goto the  **Nodes**  tab in the Puppet Configuration Management Console. It may take a few minutes to configure the Node / partsmrp VM, before it is visible in the Puppet Configuration Management Console. When the Node is ready, you should see the following nodes listed in the Puppet Configuration Management Console.
-  - Puppet Master. For example, partspuppetmasterek01
-  - Node / partsmrp. For example, partsmrpnodeek01
+Make sure you see Accepted 
 
-The nodes are also listed in the Puppet Configuration Management Console under  **Configuration**  \&gt;  **Overview**.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/16-browse6.png)
 
-![](RackMultipart20200618-4-ix4dp6_html_9aadde7eb3d2f2fd.png)
+5. Goto the  **Nodes**  tab in the Puppet Configuration Management Console. It may take a few minutes to configure the Node / partsmrp VM, before it is visible in the Puppet Configuration Management Console. When the Node is ready, you should see 2 Nodes. 
+  
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/17-browse7.png)
 
 **Note:**  You can automate the Puppet Agent installation and configuration process on an Azure VM using the [Puppet Agent extension](https://github.com/Azure/azure-quickstart-templates/tree/master/puppet-agent-windows) from the Azure Marketplace.
 
@@ -140,62 +143,73 @@ Some modules on The Forge are supported officially, others are open-source modul
 
 For this lab, we will treat the Node as if it were in the Production environment. We will also download modules from The Forge, which we will consume in order to configure the Node.
 
-Task 3: Configure the Puppet Production Environment
+### Task 3: Configure the Puppet Production Environment
 
 The template we used to deploy Puppet to Azure also configured a directory on the Puppet Master for managing the Production environment. The Production Directory is in /etc/puppetlabs/code/environments/production.
 
 1. Inspect the Production modules.
 
-Connect to the to the Puppet Master via SSH, with the PuTTy client for example. Use the Change Directory command cd to change into the Production Directory /etc/puppetlabs/code/environments/production.
+Connect to the to the Puppet Master via SSH, with the **PuTTy client**. 
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/18-PuttyM1.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/19-PuttyM2.png)
 
-cd /etc/puppetlabs/code/environments/production
+Log in with username and password credentials that you specified in Task 1. 
+- **user name**  = azureuser
+- **Password**  = Passw0rd01234
 
-Use the list command ls to list the contents of the Production Directory. You will see directories named manifests and modules.
+Use the Change Directory command cd to change into the Production Directory **/etc/puppetlabs/code/environments/production**
+
+##### cd /etc/puppetlabs/code/environments/production
+#
+Use the list command **ls** to list the contents of the _Production Directory_. 
+You will see directories named **manifests** and **modules**.
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/20-PuttyM3.png)
 
 - The manifests directory contains descriptions of machines that we will apply to Nodes later in this lab.
 - The modules directory contains any modules that are referenced by the manifests.
 
-![](RackMultipart20200618-4-ix4dp6_html_cb3fc7566f98b2bd.png)
+2. Install additional Puppet Modules from The Forge.
 
-1. Install additional Puppet Modules from The Forge.
-
-We will install modules from The Forge that are needed to configure the Node / partsmrp. Run the following commands in a terminal with an SSH connection to the Puppet Master.
+We will install modules from The Forge that are needed to configure the Node / partsmrp. 
+**Run** the following commands in a terminal with an SSH connection to the **Puppet Master**.
 
 sudo puppet module install puppetlabs-mongodb
-
 sudo puppet module install puppetlabs-tomcat
-
 sudo puppet module install maestrodev-wget
-
 sudo puppet module install puppetlabs-accounts
-
 sudo puppet module install puppetlabs-java
 
-![](RackMultipart20200618-4-ix4dp6_html_46fe02de931017f5.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
 **Note:**  The mongodb and tomcat modules from The Forge are supported officially. The wget module is a user module, and is not supported officially. The accounts module provides Puppet with _Classes_ for managing and creating users and groups in our Linux VMs. Finally, the java module provides Puppet with additional Java functionality.
 
-1. Create a custom module.
+3. Create a custom module.
 
 Create a custom module named mrpapp in the Production/ Modules Directory on the Puppet Master. The custom module will configure the PU MRP app. Run the following commands in a terminal with an SSH connection to the Puppet Master.
 
-Use the Change Directory command cd to change into the Production/ Modules Directory /etc/puppetlabs/code/environments/production/modules.
+Use the Change Directory command cd to change into the Production/ Modules Directory _/etc/puppetlabs/code/environments/production/modules_
 
-cd /etc/puppetlabs/code/environments/production/modules
+**cd /etc/puppetlabs/code/environments/production/modules**
 
 Run the module generate commands to create the mrpapp module.
 
-sudo puppet module generate partsunlimited-mrpapp
+**sudo puppet module generate partsunlimited-mrpapp**
 
-This will start a wizard that will ask a series of questions as it scaffolds the module. Simply press enter for each question (accepting blank or default) until the wizard completes.
+This will start a wizard that will ask a series of questions as it scaffolds the module. Simply **press enter** for each question (accepting blank or default) until the wizard completes.
 
-Running list command ls -la should show a list of the modules in the directory ~/production/modules, including the new mrpapp module.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/22-PuttyM5.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/23-PuttyM6.png)
 
-![](RackMultipart20200618-4-ix4dp6_html_aab2d88959ef1af2.png)
+**Note:** Running list command  **ls -la**  should show a list of the modules in the directory ~/production/modules, including the new mrpapp module.
+
+**ls -la**
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/24-PuttyM7.png)
 
 **Note:**  The ls -la combined commands will list the contents of a directory (i.e. ls), using a long list format (i.e. -l), with hidden files shown (i.e. -a).
 
-1. The mrpapp module will define our Node&#39;s configuration.
+4. The mrpapp module will define our Node&#39;s configuration.
 
 The configuration of Nodes in the Production environment is defined in a site.pp file. The site.pp file is located in the Production \ Manifests directory. The .pp filename extension is short for _Puppet Program_.
 
@@ -203,23 +217,21 @@ We will edit the site.pp file by adding a configuration for our Node.
 
 On your PuTTy session of Master node please run the following.
 
-_mkdir /tmp/cem_
+**_mkdir /tmp/cem_**
+**_#git pull_**
+**_cd /tmp/cem_**
+**_git clone https://github.com/cemvarol/AZ-400-PuppetLab_**
+**_cd /tmp/cem/AZ-400-PuppetLab_**
 
-_#git pull_
-
-_cd /tmp/cem_
-
-_git clone https://github.com/cemvarol/AZ-400-PuppetLab_
-
-_cd /tmp/cem/AZ-400-PuppetLab_
-
-**After download completed please run this.**
-
-_sudo cp /tmp/cem/AZ-400-PuppetLab/site.pp /etc/puppetlabs/code/environments/production/manifests/site.pp_
+##### After download completed please run this.
+#
+**_sudo cp /tmp/cem/AZ-400-PuppetLab/site.pp /etc/puppetlabs/code/environments/production/manifests/site.pp_**
 
 **Note:**  This will download the edited files for the necessary steps, and set site.pp file as expected.
 
-Task 4: Test the Production Environment Configuration
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/25-PuttyM8.png)
+
+## Task 4: Test the Production Environment Configuration
 
 Before we describe the PU MRP app for the Node fully, test that everything is hooked up correctly by configuring a _dummy_ file in the mrpapp module. If Puppet executes and creates the dummy file successfully, then everything is configured and working correctly. We can then set up the mrpapp module properly.
 
@@ -227,15 +239,22 @@ Before we describe the PU MRP app for the Node fully, test that everything is ho
 
 Please run the command below.
 
-_sudo cp /tmp/cem/AZ-400-PuppetLab/init.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
+**_sudo cp /tmp/cem/AZ-400-PuppetLab/init.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_**
 
-1. Test the dummy file.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/26-PuttyM9.png)
+
+2. Test the dummy file.
+#
+**Note:** Steps after this will be run on NODE Putty Connection, if you have disconnected please connect again. 
+**Do Not Run** the next commands **on Master Node** unless it is instructed
 
 To test our setup, establish an SSH connection to the Node / partsmrp VM (using the PuTTy client, for example). Run the following command in an SSH terminal to the Node.
 
-sudo puppet agent **--test**** --debug**
+##### _sudo puppet agent **--test**** --debug**_
+**Note:**  Console may prompt the password when you run the command, please enter the password again. 
+- **Password**  = Passw0rd01234
 
-![](RackMultipart20200618-4-ix4dp6_html_b6bd1a795531548f.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/27-PuttyN6.png)
 
 By default, Puppet Agents query the Puppet Master for their configuration every 30 minutes. The Puppet Agent then tests its current configuration against the configuration specified by the Puppet Master. If necessary, the Puppet Agent modifies its configuration to match the configuration specified by the Puppet Master.
 
@@ -245,9 +264,9 @@ You may see more output in your terminal than is shown in the previous screensho
 
 You can also use the cat command on the Node, to verify the presence of the file /tmp/dummy.txt on the Node, and to inspect the file&#39;s contents. The &quot;Puppet rules!&quot; message should be displayed in the terminal.
 
-cat /tmp/dummy.txt
+**cat /tmp/dummy.txt**
 
-![](RackMultipart20200618-4-ix4dp6_html_668a334f5b65215f.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/28-PuttyN7.png)
 
 1. Correct configuration drift.
 
