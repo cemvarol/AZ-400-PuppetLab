@@ -41,59 +41,44 @@ Consider the following guidelines.
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
 
 
-3. When the deployment completes, select the  **Resource Groups**  blade from the Azure Portal menu. Choose the name of Resource Group that you created,  **cd-puppet-hol**  for example.
+3. When the deployment completes, Azure will **Ring the Bell** under **Notifications**
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/02-ResourceGroup.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/02-Notifications.png)
 
-1. Within the  **Resource Group Overview**  pane, beside  **Deployments** , select the  **1 succeeded**  message to view the deployment details. The status of the Microsoft.Template resource should indicate that the deployment has  **succeeded**.
+3. Go to **Virtual Machines**  pane, ypu will see created Virtual Machines for this lab. You may see more than those below, you may have previously created virtual machines.
 
-Choose the Microsoft.Template resource, listed in the  **Deployment Name**  column.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/03-VMs.png)
 
-![](RackMultipart20200618-4-ix4dp6_html_a71653f7990a3a06.png)
+4. Click each vm individually and make a note of the  **DNS name**  values, listed inside the  **Overview**
 
-1. There is a list of the deployed resources in the  **Microsoft.Template - Overview**  pane, below the  **Your deployment is complete**  message. Select the  **Puppet Master VM**  from the list, for example partspuppetmasterek01.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/04-Vmss.png)
 
-![](RackMultipart20200618-4-ix4dp6_html_7d4bb0429d80e4e6.png)
+5. Append https:// to the beginning of the DNS name to create a URL for the Puppet Master&#39;s public DNS Address. 
+Using **https**, _not_ http, visit the URL in a web browser.
 
-1. Make a note of the  **DNS name**  value, listed inside the  **Overview**  pane for the  **Puppet Master Virtual Machine**. The DNS name value is in the format machinename.region.cloudapp.azure.com. For example, partspuppetmasterek01.northeurope.cloudapp.azure.com.
+Override the certificate error warning messages, and visit the webpage. It is safe to ignore these error messages for the purposes of this lab. 
 
-![](RackMultipart20200618-4-ix4dp6_html_159047e715056b6d.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/05-browse1.png)
 
-1. Append https:// to the beginning of the DNS name to create a URL for the Puppet Master&#39;s public DNS Address. The resulting URL should be in the format https://machinename.region.cloudapp.azure.com. For example, https://partspuppetmasterek01.northeurope.cloudapp.azure.com.
+6. If the Puppet configuration has succeeded, you should see the  **Puppet Master Console sign in webpage**.
 
-Using https, _not_ http, visit the URL in a web browser.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/06-browse2.png)
 
-Override the certificate error warning messages, and visit the webpage. It is safe to ignore these error messages for the purposes of this lab. The prompts that you see, and steps required to access the URL, may depend on the web browser you use.
-
-![](RackMultipart20200618-4-ix4dp6_html_fb8eb97e0dc5d19b.png)
-
-1. If the Puppet configuration has succeeded, you should see the  **Puppet Master Console sign in webpage**.
-
-![](RackMultipart20200618-4-ix4dp6_html_eccbe8c11d1d869d.png)
-
-**Note:**  The lab requires several ports to be open, such as the Puppet Server port, the Puppet Console port, SSH ports, and the PU MRP app port on the partsmrp VM. The ARM template opens these ports on the VMs for you. You can look through the deployment JSON template to view the port configuration details in the [PuppetPartsUnlimitedMRP.json](https://github.com/Microsoft/PartsUnlimitedMRP/tree/master/Labfiles/AZ-400T05-ImplemntgAppInfra/Labfiles/M04/Puppet/env/PuppetPartsUnlimitedMRP.json) file on GitHub.
-
-1. Log in to the  **Puppet Master Console**  with the following credentials.
+7. Log in to the  **Puppet Master Console**  with the following credentials. If you provided others, use them.
   - **user name**  = admin
-  - **Password**  = Pm Console Password you specified earlier in this lab. For example, Passw0rd0134
+  - **Password**  = Passw0rd01234
 
-**Note:**  You cannot log into the Puppet Master Console with the username and password you specified earlier in this lab. _You must login using the built in  __admin__  account_ instead, as shown.
+8. If your log in is successful, you will be redirected to the  **Puppet Configuration Management Console**  webpage which is similar in appearance to the following screenshot.
 
-1. If your log in is successful, you will be redirected to the  **Puppet Configuration Management Console**  webpage which is similar in appearance to the following screenshot.
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/07-browse3.png)
 
-![](RackMultipart20200618-4-ix4dp6_html_bf5f45a5744d5d1c.png)
-
-Task 2: Install Puppet Agent on the node
+#### Task 2: Install Puppet Agent on the node
 
 You are now ready to add the Node to the Puppet Master. Once the Node is added, the Puppet Master will be able to configure the Node.
 
-1. Get the Puppet Master internal DNS name. On the  **Puppet Configuration Management Console**  webpage, go to  **Nodes**  \&gt;  **Unsigned Certificates**. The page that loads will show an Add node command. Make a note of the command, we will run it in Step 4 of this lab task.
+1. On the  **Puppet Configuration Management Console**  webpage, go to  **Nodes** --> **Unsigned Certificates**. The page that loads will show a command starts with _curl_. Make a note of the command, we will run it in Step 4 of this task.
 
-For example, the Puppet Master machine name is partspuppetmasterek01.northeurope.cloudapp.azure.com, and the command we need to run will be similar to the following command.
-
-curl **-k** https://partspuppetmasterek01.irblmudbrloe5hz001blu2g34f.ax.internal.cloudapp.net:8140/packages/current/install.bash | sudo bash
-
-![](RackMultipart20200618-4-ix4dp6_html_2b89d52605601131.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/08-browse4.png)
 
 1. In Azure Portal, from the  **left menu** , choose  **All Resources**  \&gt;  **partsmrpnodeek01**  (or whatever name you specified for the Node / partsmrp VM). Make a note of the  **DNS name**  value for the Node VM.
 
