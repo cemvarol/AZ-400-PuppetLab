@@ -12,10 +12,7 @@ Instead of manually creating the VMs in Azure, we will use an **Azure Resource M
 
 1. To provision the required VMs in Azure using an ARM template, select the  **Deploy to Azure**  button, and follow the wizard. You will need to log in to the Azure Portal.
 
-
-
-
-[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json')      [![](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
+[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)      [![](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
 
 - The VMs will be deployed to a Resource Group along with a Virtual Network (VNET), and some other required resources.
 
@@ -36,8 +33,9 @@ Consider the following guidelines.
 - **Mrp Admin Username:** The  **Mrp**  refers to the Puppet Node VM use something you will remember during this lab E.g. **azureuser**. 
 - **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **Passw0rd01234**   _(This is a password for the Puppet Master Virtual Machine)_
 - **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pnodecvaz032001_** _remember to provide something unique_
-- Use the  **checkbox**  to agree to the Azure Marketplace terms and conditions. Select the  **Purchase**  button. Allow **about 10 minutes for each deployment** to complete.
 ##### Make a note of the location region, as well as any usernames and passwords you set for the VMs.
+- Use the  **checkbox**  to agree to the Azure Marketplace terms and conditions. Select the  **Purchase**  button. Allow **about 10 minutes for each deployment** to complete.
+
 
 #
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/01-CustomDeployment.png)
