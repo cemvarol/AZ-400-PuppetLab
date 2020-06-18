@@ -25,12 +25,22 @@ Instead of manually creating the VMs in Azure, we will use an **Azure Resource M
 
 Consider the following guidelines.
 
-- **Subscription**. Your Azure subscription
-- **Resource group**. Provide a ne Resource group name.  E.g. **PuppetLab**. Remember to remove the resources created in this lab by deleting the Resource Group.
-- **Location**. Select a region to deploy the VMs to. E.g. **EastUs or EastUS2 or WestUs.**
-- **Pm Admin Username**. The  **Pm**  refers to the Puppet Master VM, and  **Mrp**  refers to the Node VM. Choose the same Admin Username for both  **Pm**  and  **Mrp**  VMs. E.g., **azureuser**.
-- **Pm Admin Password**. Set the same Admin Password for both VMs, and for the  **Pm Console**. E.g. **Passw0rd0134**
-- **Pm Dns Name For Public IP**. Include the word **_master_** in the Puppet Master DNS name, to distinguish it from the Node VM. You could include the word **_node_** in the Node DNS name, if you wish, e.g. **_pupmaster_**. Create unique DNS names for both VMs by adding your initials as a suffix. E.g. **_puppetmaster01_** and **_puppetnote01_**
+- **Subscription:** Your Azure subscription
+- **Resource group:** Provide a ne Resource group name.  E.g. **PuppetLab**. 
+-- Remember to remove the resources created in this lab by deleting the Resource Group.
+- **Location:**  Select a region to deploy the VMs to. E.g. **EastUs or EastUS2 or WestUs.**
+- **Pm Admin Username:** The  **Pm**  refers to the Puppet Master VM use something you will remember during this lab E.g. **azureuser**.  
+- **Pm Admin Password:** Set the same Admin Password for both Nodes, and for the  **Pm Console**. E.g. **Passw0rd01234**  _(This is a password for the Puppet Master Virtual Machine)_
+- **Pm Dns Name For Public IP:** Include the word **_master_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_puppetmaster01_**
+- **Pm Console Password:** Provide a password for the **Puppet Master console admin account** You can use the same password E.g. **Passw0rd01234** 
+- **Mrp Admin Username:** The  **Mrp**  refers to the Puppet Node VM use something you will remember during this lab E.g. **azureuser**. 
+- **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **Passw0rd01234**   _(This is a password for the Puppet Master Virtual Machine)_
+- **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_puppetnode01_**
+
+
+
+- and  **Mrp**  refers to the Node VM. Choose the same Admin Username for both  **Pm**  and  **Mrp**  VMs. E.g., **azureuser**.
+. You could include the word **_node_** in the Node DNS name, if you wish, e.g. **_pupmaster_**. Create unique DNS names for both VMs by adding your initials as a suffix. E.g. **_puppetmaster01_** and **_puppetnode01_**
 
 ![](RackMultipart20200618-4-ix4dp6_html_30e11446a168e6b9.png)
 
