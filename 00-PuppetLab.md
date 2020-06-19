@@ -359,7 +359,7 @@ Open a web browser and browse to port 9080 on the Node/ partsmrp VM. Once open i
 
 3. Verify that the PU MRP app is running correctly.
 
-Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080/mrp.
+Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://pnodecvaz032001.centralus.cloudapp.azure.com:9080/mrp/.
 
 You can also get the DNS name for the Node/ partsmrp VM in  **Azure Portal**.
 
