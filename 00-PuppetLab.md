@@ -186,8 +186,7 @@ We will install modules from The Forge that are needed to configure the Node / p
 
 **_sudo puppet module install puppetlabs-java_**
 
-
-
+#
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
 **Note:**  The mongodb and tomcat modules from The Forge are supported officially. The wget module is a user module, and is not supported officially. The accounts module provides Puppet with _Classes_ for managing and creating users and groups in our Linux VMs. Finally, the java module provides Puppet with additional Java functionality.
