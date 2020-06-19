@@ -186,6 +186,8 @@ We will install modules from The Forge that are needed to configure the Node / p
 
 **_sudo puppet module install puppetlabs-java_**
 
+.
+
 #
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
