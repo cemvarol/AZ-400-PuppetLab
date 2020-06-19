@@ -348,7 +348,7 @@ Return to, or re-establish, your SSH session on the Node/ partsmrp VM. Force Pup
 
 2. Verify that Tomcat is running correctly.
 
-Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://pnodecvaz03201.eastus2.cloudapp.azure.com:9080/
+Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://pnodecvaz03201.eastus.cloudapp.azure.com:9080/
 
 You can get the DNS address URL from the  **Public IP resource**  for the Node, in  **Azure Portal**  (just as you did when you got the URL of the Puppet Master earlier).
 
@@ -359,7 +359,7 @@ Open a web browser and browse to port 9080 on the Node/ partsmrp VM. Once open i
 
 3. Verify that the PU MRP app is running correctly.
 
-Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://pnodecvaz032001.centralus.cloudapp.azure.com:9080/mrp/.
+Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://pnodecvaz032001.eastus.cloudapp.azure.com:9080/mrp/.
 
 You can also get the DNS name for the Node/ partsmrp VM in  **Azure Portal**.
 
