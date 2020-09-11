@@ -222,7 +222,7 @@ On your PuTTy session of Master node please run the following.
 ```sh
 mkdir /tmp/cem
 
-#git pull
+git pull
 
 cd /tmp/cem
 
