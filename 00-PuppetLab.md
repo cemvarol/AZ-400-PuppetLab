@@ -175,12 +175,13 @@ You will see directories named **manifests** and **modules**.
 We will install modules from The Forge that are needed to configure the Node / partsmrp. 
 **Run** the following commands in a terminal with an SSH connection to the **Puppet Master**.
 
+```sh
 sudo puppet module install puppetlabs-mongodb
 sudo puppet module install puppetlabs-tomcat
 sudo puppet module install maestrodev-wget
 sudo puppet module install puppetlabs-accounts
 sudo puppet module install puppetlabs-java
-
+```
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
 **Note:**  The mongodb and tomcat modules from The Forge are supported officially. The wget module is a user module, and is not supported officially. The accounts module provides Puppet with _Classes_ for managing and creating users and groups in our Linux VMs. Finally, the java module provides Puppet with additional Java functionality.
