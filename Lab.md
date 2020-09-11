@@ -175,12 +175,13 @@ You will see directories named **manifests** and **modules**.
 We will install modules from The Forge that are needed to configure the Node / partsmrp. 
 **Run** the following commands in a terminal with an SSH connection to the **Puppet Master**.
 
+```sh
 sudo puppet module install puppetlabs-mongodb
 sudo puppet module install puppetlabs-tomcat
 sudo puppet module install maestrodev-wget
 sudo puppet module install puppetlabs-accounts
 sudo puppet module install puppetlabs-java
-
+```
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
 **Note:**  The mongodb and tomcat modules from The Forge are supported officially. The wget module is a user module, and is not supported officially. The accounts module provides Puppet with _Classes_ for managing and creating users and groups in our Linux VMs. Finally, the java module provides Puppet with additional Java functionality.
@@ -218,11 +219,17 @@ We will edit the site.pp file by adding a configuration for our Node.
 
 On your PuTTy session of Master node please run the following.
 
-**_mkdir /tmp/cem_**
-**_#git pull_**
-**_cd /tmp/cem_**
-**_git clone https://github.com/cemvarol/AZ-400-PuppetLab_**
-**_cd /tmp/cem/AZ-400-PuppetLab_**
+```sh
+mkdir /tmp/cem
+
+git pull
+
+cd /tmp/cem
+
+git clone https://github.com/cemvarol/AZ-400-PuppetLab
+
+cd /tmp/cem/AZ-400-PuppetLab
+```
 
 ##### After download completed please run this.
 #
@@ -251,7 +258,7 @@ Please run the command below.
 
 To test our setup, establish an SSH connection to the Node / partsmrp VM (using the PuTTy client, for example). Run the following command in an SSH terminal to the Node.
 
-##### _sudo puppet agent **--test**** --debug**_
+##### sudo puppet agent --test  --debug
 **Note:**  Console may prompt the password when you run the command, please enter the password again. 
 - **Password**  = Passw0rd01234
 
