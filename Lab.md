@@ -149,7 +149,8 @@ The template we used to deploy Puppet to Azure also configured a directory on th
 
 1. Inspect the Production modules.
 
-Connect to the to the Puppet Master via SSH, with the **PuTTy client**. 
+Connect to the to the Puppet Master via SSH, with the **PuTTy client** 
+
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/18-PuttyM1.png)
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/19-PuttyM2.png)
 
