@@ -309,12 +309,19 @@ In practice, the different parts of a large configuration solution are typically
 For simplicity, in this lab, we will describe our entire configuration in a single Puppet Program file init.pp, from inside the mrpapp module that we created earlier. In Task 5, we will build up our init.pp step-by-step.
 
 Task 5.1 Configure MongoDB
+
 Task 5.2 Configure Java
+
 Task 5.3 Create User and Group
+
 Task 5.4 Configure Tomcat
+
 Task 5.5 Deploy a WAR File
+
 Task 5.6 Start the Ordering Service
+
 Task 5.7 Complete the mrpapp Resource
+
 
 **Please run the command below for all 7 tasks above on Master NODE…**
 
