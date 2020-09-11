@@ -220,15 +220,15 @@ We will edit the site.pp file by adding a configuration for our Node.
 On your PuTTy session of Master node please run the following.
 
 ```sh
-_mkdir /tmp/cem_
+mkdir /tmp/cem
 
-_#git pull_
+#git pull
 
-_cd /tmp/cem_
+cd /tmp/cem
 
-_git clone https://github.com/cemvarol/AZ-400-PuppetLab_
+git clone https://github.com/cemvarol/AZ-400-PuppetLab
 
-_cd /tmp/cem/AZ-400-PuppetLab_
+cd /tmp/cem/AZ-400-PuppetLab
 ```
 
 ##### After download completed please run this.
