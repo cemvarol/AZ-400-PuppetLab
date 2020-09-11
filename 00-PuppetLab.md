@@ -258,7 +258,7 @@ Please run the command below.
 
 To test our setup, establish an SSH connection to the Node / partsmrp VM (using the PuTTy client, for example). Run the following command in an SSH terminal to the Node.
 
-##### _sudo puppet agent **--test**** --debug**_
+##### sudo puppet agent --test  --debug
 **Note:**  Console may prompt the password when you run the command, please enter the password again. 
 - **Password**  = Passw0rd01234
 
