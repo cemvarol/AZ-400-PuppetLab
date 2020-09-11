@@ -126,8 +126,6 @@ Make sure you see Accepted
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/16-browse6.png)
 
 5. Goto the  **Nodes**  tab in the Puppet Configuration Management Console. It may take a few minutes to configure the Node / partsmrp VM, before it is visible in the Puppet Configuration Management Console. When the Node is ready, you should see 2 Nodes. 
-
-**Note:** If you see only 1 entry but no error, you can carry on, other one will appear soon. 
   
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/17-browse7.png)
 
@@ -151,7 +149,8 @@ The template we used to deploy Puppet to Azure also configured a directory on th
 
 1. Inspect the Production modules.
 
-Connect to the to the Puppet Master via SSH, with the **PuTTy client**. 
+Connect to the to the Puppet Master via SSH, with the **PuTTy client** 
+
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/18-PuttyM1.png)
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/19-PuttyM2.png)
 
@@ -176,19 +175,12 @@ You will see directories named **manifests** and **modules**.
 We will install modules from The Forge that are needed to configure the Node / partsmrp. 
 **Run** the following commands in a terminal with an SSH connection to the **Puppet Master**.
 
-**_sudo puppet module install puppetlabs-mongodb_**
+sudo puppet module install puppetlabs-mongodb
+sudo puppet module install puppetlabs-tomcat
+sudo puppet module install maestrodev-wget
+sudo puppet module install puppetlabs-accounts
+sudo puppet module install puppetlabs-java
 
-**_sudo puppet module install puppetlabs-tomcat_**
-
-**_sudo puppet module install maestrodev-wget_**
-
-**_sudo puppet module install puppetlabs-accounts_**
-
-**_sudo puppet module install puppetlabs-java_**
-
-.
-
-#
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
 **Note:**  The mongodb and tomcat modules from The Forge are supported officially. The wget module is a user module, and is not supported officially. The accounts module provides Puppet with _Classes_ for managing and creating users and groups in our Linux VMs. Finally, the java module provides Puppet with additional Java functionality.
@@ -227,15 +219,10 @@ We will edit the site.pp file by adding a configuration for our Node.
 On your PuTTy session of Master node please run the following.
 
 **_mkdir /tmp/cem_**
-
 **_#git pull_**
-
 **_cd /tmp/cem_**
-
 **_git clone https://github.com/cemvarol/AZ-400-PuppetLab_**
-
 **_cd /tmp/cem/AZ-400-PuppetLab_**
-
 
 ##### After download completed please run this.
 #
@@ -259,13 +246,12 @@ Please run the command below.
 
 2. Test the dummy file.
 #
-**Note:** Steps after this will be run on **NODE Putty Connection**, if you have disconnected please connect again. 
+**Note:** Steps after this will be run on NODE Putty Connection, if you have disconnected please connect again. 
 **Do Not Run** the next commands **on Master Node** unless it is instructed
 
 To test our setup, establish an SSH connection to the Node / partsmrp VM (using the PuTTy client, for example). Run the following command in an SSH terminal to the Node.
 
-##### _sudo puppet agent --test --debug_
-
+##### _sudo puppet agent **--test**** --debug**_
 **Note:**  Console may prompt the password when you run the command, please enter the password again. 
 - **Password**  = Passw0rd01234
 
@@ -289,22 +275,23 @@ By default, Puppet Agent runs every 30 minutes on the Nodes. Each time the Agent
 
 Simulate Configuration Drift by deleting the dummy file dummy.txt from the Node. Run the following command in a terminal connected to the Node to delete the file.
 
-**sudo rm /tmp/dummy.txt**
+sudo rm /tmp/dummy.txt
 
 Confirm that the file was deleted from the Node successfully by running the following command on the Node. The command should produce a _No such file or directory_ warning message.
 
-**cat /tmp/dummy.txt**
+cat /tmp/dummy.txt
 
 Re-run the Puppet Agent on the Node with the following command.
 
-**sudo puppet agent --test**
+sudo puppet agent **--test**
 
 The re-run should complete successfully, and the file should now exist on the Node again. Verify that the file is present on the Node by running the following command on the Node. Confirm that the &quot;Puppet rules!&quot; message is displayed in the terminal.
 
-**cat /tmp/dummy.txt**
+cat /tmp/dummy.txt
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyN8.png)
+![](RackMultipart20200618-4-ix4dp6_html_f4f5724100287ac4.png)
 
+You can also edit the contents of the file dummy.txt on the Node. Re-run the sudo puppet agent --test command, and verify that the contents of the file dummy.txt have been reverted to match the configuration specified on the Puppet Master.
 
 ### Task 5: Create a Puppet Program to describe the prerequisites for the PU MRP app
 
@@ -326,47 +313,48 @@ Task 5.7 Complete the mrpapp Resource
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/init2.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
 
-**For Task 5.8**  Configure .war file extracton permissions
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyMA.png)
+
+Task 5.8 Configure .war file extracton permissions
 
 **Please run the command below for task 5.8**
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/war.pp /etc/puppetlabs/code/environments/production/modules/tomcat/manifests/war.pp_
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMA.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMB.png)
 
-### Task 6: Run the Puppet Configuration on the Node
+Task 6: Run the Puppet Configuration on the Node
 
 1. Re-run the Puppet Agent.
 
 Return to, or re-establish, your SSH session on the Node/ partsmrp VM. Force Puppet to update the Node&#39;s configuration with the following command.
 
-**sudo puppet agent --test**
-
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/31-PuttyN6.png)
+sudo puppet agent **--test**
 
 **Note:**  This first run may take a few moments, as there is a lot to download and install. The next time that you run the Puppet Agent, it will verify that the existing environment is configured correctly. This verification process will take less time than the first run, because the services will be installed and configured already.
 
-2. Verify that Tomcat is running correctly.
+1. Verify that Tomcat is running correctly.
 
-Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://pnodecvaz03201.eastus.cloudapp.azure.com:9080/
+Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080
 
 You can get the DNS address URL from the  **Public IP resource**  for the Node, in  **Azure Portal**  (just as you did when you got the URL of the Puppet Master earlier).
 
 Open a web browser and browse to port 9080 on the Node/ partsmrp VM. Once open in the web browser, you should see the  **Tomcat Confirmation**  webpage.
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/32-ITWorks.png)
 
 **Note:**  Use the http protocol, and _not_ https.
 
-3. Verify that the PU MRP app is running correctly.
+![](RackMultipart20200618-4-ix4dp6_html_b1f98e642573b865.png)
 
-Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://pnodecvaz032001.eastus.cloudapp.azure.com:9080/mrp/.
+1. Verify that the PU MRP app is running correctly.
+
+Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080/mrp.
 
 You can also get the DNS name for the Node/ partsmrp VM in  **Azure Portal**.
 
 The  **PU MRP app Welcome**  webpage should be displayed in your web browser.
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/33-ITWorksMRP.png)
+![](RackMultipart20200618-4-ix4dp6_html_9507eba1c9a16e2.png)
 
 Explore the PU MRP app to confirm that it functions as intended. For example, select the  **Orders**  button, in your web browser, to view the  **Orders page**.
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/34-ITWorksMRP2.png)
+![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png)
