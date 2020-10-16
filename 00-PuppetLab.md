@@ -340,7 +340,7 @@ sudo puppet agent **--test**
 
 **Note:**  This first run may take a few moments, as there is a lot to download and install. The next time that you run the Puppet Agent, it will verify that the existing environment is configured correctly. This verification process will take less time than the first run, because the services will be installed and configured already.
 
-1. Verify that Tomcat is running correctly.
+2. Verify that Tomcat is running correctly.
 
 Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080
 
@@ -352,7 +352,7 @@ Open a web browser and browse to port 9080 on the Node/ partsmrp VM. Once open i
 
 ![](RackMultipart20200618-4-ix4dp6_html_b1f98e642573b865.png)
 
-1. Verify that the PU MRP app is running correctly.
+3. Verify that the PU MRP app is running correctly.
 
 Check that the configuration is correct by opening a web browser to the PU MRP app. In your web browser, append /mrp to the end of DNS address URL you used in Step 2. For example, http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080/mrp.
 
