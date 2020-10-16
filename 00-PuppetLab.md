@@ -62,11 +62,11 @@ Override the certificate error warning messages, and visit the webpage. It is sa
 
 6. If the Puppet configuration has succeeded, you should see the  **Puppet Master Console sign in webpage**.
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/06-browse2.png)
-
 7. Log in to the  **Puppet Master Console**  with the following credentials. This is the admin console.
   - **user name**  = admin
   - **Password**  = Passw0rd01234
+
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/06-browse2.png)
 
 8. If your log in is successful, you will be redirected to the  **Puppet Configuration Management Console**  webpage which is similar in appearance to the following screenshot.
 
