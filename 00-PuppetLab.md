@@ -45,7 +45,7 @@ Consider the following guidelines.
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/02-Notifications.png)
 
-3. Go to **Virtual Machines**  pane, ypu will see created Virtual Machines for this lab. You may see more than those below, you may have previously created virtual machines.
+3. Go to **Virtual Machines**  pane, you will see created Virtual Machines for this lab. You may see more than those below, you may have previously created virtual machines.
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/03-VMs.png)
 
@@ -222,7 +222,7 @@ On your PuTTy session of Master node please run the following.
 ```sh
 mkdir /tmp/cem
 
-git pull
+ # git pull
 
 cd /tmp/cem
 
