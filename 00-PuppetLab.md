@@ -332,7 +332,7 @@ _sudo cp /tmp/cem/AZ-400-PuppetLab/war.pp /etc/puppetlabs/code/environments/prod
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMB.png)
 
-Task 6: Run the Puppet Configuration on the Node
+### Task 6: Run the Puppet Configuration on the Node
 
 1. Re-run the Puppet Agent.
 
