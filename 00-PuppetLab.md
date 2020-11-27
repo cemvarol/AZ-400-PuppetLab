@@ -282,19 +282,26 @@ By default, Puppet Agent runs every 30 minutes on the Nodes. Each time the Agent
 
 Simulate Configuration Drift by deleting the dummy file dummy.txt from the Node. Run the following command in a terminal connected to the Node to delete the file.
 
+```sh
 sudo rm /tmp/dummy.txt
-
+```
 Confirm that the file was deleted from the Node successfully by running the following command on the Node. The command should produce a _No such file or directory_ warning message.
 
+```sh
 cat /tmp/dummy.txt
+```
 
 Re-run the Puppet Agent on the Node with the following command.
 
+```sh
 sudo puppet agent **--test**
+```
 
 The re-run should complete successfully, and the file should now exist on the Node again. Verify that the file is present on the Node by running the following command on the Node. Confirm that the &quot;Puppet rules!&quot; message is displayed in the terminal.
 
+```sh
 cat /tmp/dummy.txt
+```
 
 ![](RackMultipart20200618-4-ix4dp6_html_f4f5724100287ac4.png)
 
