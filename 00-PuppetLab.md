@@ -27,11 +27,11 @@ Consider the following guidelines.
 - - Remember to remove the resources created in this lab by deleting the Resource Group.
 - **Location:**  Select a region to deploy the VMs to. E.g. **EastUs or EastUS2 or WestUs.**
 - **Pm Admin Username:** The  **Pm**  refers to the Puppet Master VM use something you will remember during this lab E.g. **azureuser**.  
-- **Pm Admin Password:** Set the same Admin Password for both Nodes, and for the  **Pm Console**. E.g. **Passw0rd01234**  _(This is a password for the Puppet Master Virtual Machine)_
+- **Pm Admin Password:** Set the same Admin Password for both Nodes, and for the  **Pm Console**. E.g. **1q2w3e4r5t6y***  _(This is a password for the Puppet Master Virtual Machine)_
 - **Pm Dns Name For Public IP:** Include the word **_master_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pmascvaz032001_** _remember to provide something unique_
-- **Pm Console Password:** Provide a password for the **Puppet Master console admin account** You can use the same password E.g. **Passw0rd01234** 
+- **Pm Console Password:** Provide a password for the **Puppet Master console admin account** You can use the same password E.g. **1q2w3e4r5t6y*** 
 - **Mrp Admin Username:** The  **Mrp**  refers to the Puppet Node VM use something you will remember during this lab E.g. **azureuser**. 
-- **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **Passw0rd01234**   _(This is a password for the Puppet Master Virtual Machine)_
+- **Mrp Admin Password:** Set the same Admin Password for this node like the others.  E.g. **1q2w3e4r5t6y***   _(This is a password for the Puppet Master Virtual Machine)_
 - **Mrp Dns Name For Public IP:** Include the word **_node_** in the Puppet Master DNS name, to distinguish it from the Node VM E.g. **_pnodecvaz032001_** _remember to provide something unique_
 ##### Make a note of the location region, as well as any usernames and passwords you set for the VMs.
 - Use the  **checkbox**  to agree to the Azure Marketplace terms and conditions. Select the  **Purchase**  button. Allow **about 10 minutes for each deployment** to complete.
@@ -64,7 +64,7 @@ Override the certificate error warning messages, and visit the webpage. It is sa
 
 7. Log in to the  **Puppet Master Console**  with the following credentials. This is the admin console.
   - **user name**  = admin
-  - **Password**  = Passw0rd01234
+  - **Password**  = 1q2w3e4r5t6y*
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/06-browse2.png)
 
@@ -92,7 +92,7 @@ If prompted, choose  **Yes**  to add the SSH key to PuTTy&#39;s cache.
 
 Log in with username and password credentials that you specified in Task 1. 
 - **user name**  = azureuser
-- **Password**  = Passw0rd01234
+- **Password**  = 1q2w3e4r5t6y*
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/11-PuttyN3.png)
 
@@ -108,7 +108,7 @@ The command begins with **curl**....
 Wait for the command to install the Puppet Agent and any dependencies on the Node. The command takes two or three minutes to complete.
 
 **Note:**  Console may prompt the password when you run the command, please enter the password again. 
-- **Password**  = Passw0rd01234
+- **Password**  = 1q2w3e4r5t6y*
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/14-PuttyN5.png)
 
@@ -156,7 +156,7 @@ Connect to the to the Puppet Master via SSH, with the **PuTTy client**
 
 Log in with username and password credentials that you specified in Task 1. 
 - **user name**  = azureuser
-- **Password**  = Passw0rd01234
+- **Password**  = 1q2w3e4r5t6y*
 
 Use the Change Directory command cd to change into the Production Directory **/etc/puppetlabs/code/environments/production**
 
@@ -260,7 +260,7 @@ To test our setup, establish an SSH connection to the Node / partsmrp VM (using 
 
 ##### sudo puppet agent --test  --debug
 **Note:**  Console may prompt the password when you run the command, please enter the password again. 
-- **Password**  = Passw0rd01234
+- **Password**  = 1q2w3e4r5t6y*
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/27-PuttyN6.png)
 
