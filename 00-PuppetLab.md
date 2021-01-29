@@ -12,9 +12,9 @@ Instead of manually creating the VMs in Azure, we will use an **Azure Resource M
 
 1. To provision the required VMs in Azure using an ARM template, select the  **Deploy to Azure**  button, and follow the wizard. You will need to log in to the Azure Portal.
 
-[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
-Check
+[![](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)      
 [![](http://armviz.io/visualizebutton.png)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcemvarol%2FAZ-400-PuppetLab%2Fmaster%2FPuppetPartsUnlimitedMRP.json)
+![](http://armviz.io/visualizebutton.png)
 
 - The VMs will be deployed to a Resource Group along with a Virtual Network (VNET), and some other required resources.
 
