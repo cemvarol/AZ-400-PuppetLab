@@ -295,7 +295,7 @@ cat /tmp/dummy.txt
 Re-run the Puppet Agent on the Node with the following command.
 
 ```sh
-sudo puppet agent **--test**
+sudo puppet agent --test
 ```
 
 The re-run should complete successfully, and the file should now exist on the Node again. Verify that the file is present on the Node by running the following command on the Node. Confirm that the &quot;Puppet rules!&quot; message is displayed in the terminal.
