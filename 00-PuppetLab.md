@@ -351,6 +351,10 @@ sudo puppet agent **--test**
 
 **Note:**  This first run may take a few moments, as there is a lot to download and install. The next time that you run the Puppet Agent, it will verify that the existing environment is configured correctly. This verification process will take less time than the first run, because the services will be installed and configured already.
 
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/31-PuttyN6.png)
+
+
+
 2. Verify that Tomcat is running correctly.
 
 Append the port number 9080 to the DNS address URL for the Node/ partsmrp VM, for example http://partsmrpnodeek01.westeurope.cloudapp.azure.com:9080
