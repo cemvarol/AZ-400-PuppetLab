@@ -125,7 +125,7 @@ Make sure you see Accepted
 
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/16-browse6.png)
 
-5. Goto the  **Nodes**  tab in the Puppet Configuration Management Console. It may take a few minutes to configure the Node / partsmrp VM, before it is visible in the Puppet Configuration Management Console. When the Node is ready, you should see 2 Nodes. 
+5. Goto the  **Nodes**  tab in the Puppet Configuration Management Console. It may take a few minutes to configure the Node / partsmrp VM, before it is visible in the Puppet Configuration Management Console. When the Node is ready, make sure your node server(s) listed. 
   
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/17-browse7.png)
 
