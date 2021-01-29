@@ -330,7 +330,7 @@ Task 5.7 Complete the mrpapp Resource
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/init2.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyMA.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyN8.png)
 
 Task 5.8 Configure .war file extracton permissions
 
@@ -360,7 +360,7 @@ Open a web browser and browse to port 9080 on the Node/ partsmrp VM. Once open i
 
 **Note:**  Use the http protocol, and _not_ https.
 
-![](RackMultipart20200618-4-ix4dp6_html_b1f98e642573b865.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/32-ITWorks.png)
 
 3. Verify that the PU MRP app is running correctly.
 
@@ -370,8 +370,8 @@ You can also get the DNS name for the Node/ partsmrp VM in  **Azure Portal**.
 
 The  **PU MRP app Welcome**  webpage should be displayed in your web browser.
 
-![](RackMultipart20200618-4-ix4dp6_html_9507eba1c9a16e2.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/33-ITWorksMRP.png)
 
 Explore the PU MRP app to confirm that it functions as intended. For example, select the  **Orders**  button, in your web browser, to view the  **Orders page**.
 
-![](RackMultipart20200618-4-ix4dp6_html_4723524f7d4f44f9.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/34-ITWorksMRP2.png)
