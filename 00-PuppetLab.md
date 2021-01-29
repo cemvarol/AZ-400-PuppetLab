@@ -305,6 +305,7 @@ cat /tmp/dummy.txt
 ```
 
 ![](RackMultipart20200618-4-ix4dp6_html_f4f5724100287ac4.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyN8.png)
 
 You can also edit the contents of the file dummy.txt on the Node. Re-run the sudo puppet agent --test command, and verify that the contents of the file dummy.txt have been reverted to match the configuration specified on the Puppet Master.
 
@@ -330,7 +331,7 @@ Task 5.7 Complete the mrpapp Resource
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/init2.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/29-PuttyN8.png)
+
 
 Task 5.8 Configure .war file extracton permissions
 
