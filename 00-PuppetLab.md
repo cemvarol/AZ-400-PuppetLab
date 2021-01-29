@@ -253,7 +253,7 @@ Please run the command below.
 
 2. Test the dummy file.
 #
-**Note:** Steps after this will be run on NODE Putty Connection, if you have disconnected please connect again. 
+**Note:** Steps after this **will be run on NODE Putty Connection,** if you have disconnected please connect again. 
 **Do Not Run** the next commands **on Master Node** unless it is instructed
 
 To test our setup, establish an SSH connection to the Node / partsmrp VM (using the PuTTy client, for example). Run the following command in an SSH terminal to the Node.
