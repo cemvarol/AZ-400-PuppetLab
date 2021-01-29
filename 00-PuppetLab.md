@@ -338,7 +338,7 @@ Task 5.8 Configure .war file extracton permissions
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/war.pp /etc/puppetlabs/code/environments/production/modules/tomcat/manifests/war.pp_
 
-![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMB.png)
+![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/30-PuttyMA.png)
 
 ### Task 6: Run the Puppet Configuration on the Node
 
