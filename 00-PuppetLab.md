@@ -231,6 +231,7 @@ cd /tmp/cem
 git clone https://github.com/cemvarol/AZ-400-PuppetLab
 
 cd /tmp/cem/AZ-400-PuppetLab
+#
 ```
 
 ##### After download completed please run this.
