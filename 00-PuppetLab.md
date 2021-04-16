@@ -329,7 +329,7 @@ Task 5.6 Start the Ordering Service
 Task 5.7 Complete the mrpapp Resource
 ```
 
-**Please run the command below for all 7 tasks above on Master **
+**Please run the command below for all 7 tasks above on Master**
 
 _sudo cp /tmp/cem/AZ-400-PuppetLab/init2.pp /etc/puppetlabs/code/environments/production/modules/mrpapp/manifests/init.pp_
 
