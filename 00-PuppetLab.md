@@ -182,6 +182,7 @@ sudo puppet module install puppetlabs-tomcat
 sudo puppet module install maestrodev-wget
 sudo puppet module install puppetlabs-accounts
 sudo puppet module install puppetlabs-java
+#
 ```
 ![](https://raw.githubusercontent.com/cemvarol/AZ-400-PuppetLab/master/21-PuttyM4.png)
 
