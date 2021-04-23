@@ -52,11 +52,11 @@
   "variables": {
     "pmImagePublisher": "Canonical",
     "pmImageOffer": "UbuntuServer",
-    "pmImageSku": "20.04.0-LTS",
+    "pmImageSku": "18.04.0-LTS",
     "pmVersion": "2019.8.0",
     "mrpImagePublisher": "Canonical",
     "mrpImageOffer": "UbuntuServer",
-    "mrpImageSku": "20.04.0-LTS",
+    "mrpImageSku": "18.04.0-LTS",
     "mrpOSDiskName": "mrpOsdisk",
     "pmOSDiskName": "pupperMasterOsdisk",
     "pmNicName": "puppetNic",
