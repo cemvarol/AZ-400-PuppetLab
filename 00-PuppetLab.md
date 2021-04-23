@@ -190,6 +190,10 @@ sudo puppet module install puppetlabs-java
 
 3. Create a custom module.
 
+First, be Superman in order to run some commands with administrative priviliges
+
+**sudo su**
+
 Create a custom module named mrpapp in the Production/ Modules Directory on the Puppet Master. The custom module will configure the PU MRP app. Run the following commands in a terminal with an SSH connection to the Puppet Master.
 
 Use the Change Directory command cd to change into the Production/ Modules Directory _/etc/puppetlabs/code/environments/production/modules_
