@@ -11,8 +11,9 @@ pe_version=$1
 console_pw=$2
 
 # Configure for Puppet Enterprise version
+pe_url=https://pm.puppetlabs.com/puppet-enterprise/2019.8.0/puppet-enterprise-2019.8.0-ubuntu-18.04-amd64.tar.gz
 #pe_url=https://pm.puppetlabs.com/puppet-agent/2019.8.0/6.16.0/repos/deb/focal/puppet6/puppet-agent_6.16.0-1focal_amd64.deb
-pe_url=https://pm.puppetlabs.com/pe-client-tools/2019.8.0/19.8.1/repos/deb/bionic/PC1/pe-client-tools_19.8.1-1bionic_amd64.deb
+#pe_url=https://pm.puppetlabs.com/pe-client-tools/2019.8.0/19.8.1/repos/deb/bionic/PC1/pe-client-tools_19.8.1-1bionic_amd64.deb
 
 
 # Set up variables
